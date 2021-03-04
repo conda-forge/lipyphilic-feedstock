@@ -26,8 +26,8 @@ requirements:
     - numpy >=1.16
     - pandas >=1.1
     - python >=3.6
-    - cython
-    - mock
+    - scipy
+    - tqdm
 
 test:
   imports:
