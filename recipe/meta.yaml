@@ -28,6 +28,8 @@ requirements:
     - python >=3.6
     - scipy
     - tqdm
+    - mock # required by MDAnalysis
+    - cython # required by gsd and Freud
 
 test:
   imports:
