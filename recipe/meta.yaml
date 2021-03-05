@@ -1,5 +1,5 @@
 {% set name = "lipyphilic" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lipyphilic-{{ version }}.tar.gz
-  sha256: a39e0a13d073fcc7bbe398a3079b9601a00a2df3552a85e04141aa4fd6d0c22d
+  sha256: 282abe1aae37373fbf18329228f7472e27d5ea747b0e1ec486b2d93523c8cccf
 
 build:
   number: 0
@@ -26,8 +26,10 @@ requirements:
     - numpy >=1.16
     - pandas >=1.1
     - python >=3.6
-    - cython
-    - mock
+    - scipy
+    - tqdm
+    - mock # required by MDAnalysis
+    - cython # required by gsd and Freud
 
 test:
   imports:
