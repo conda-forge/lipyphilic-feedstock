@@ -1,5 +1,5 @@
 {% set name = "lipyphilic" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lipyphilic-{{ version }}.tar.gz
-  sha256: 055b6e93e3d4cf7188c8322c772c35c7105910e5649372dc8ac58a6ef31a3a31
+  sha256: ad1ee99f26346735c6ed05dfdf9a3da727639fe3ed1558ceb2df7978ff533be5
 
 build:
   number: 0
