@@ -1,5 +1,5 @@
 {% set name = "lipyphilic" %}
-{% set version = "0.8.0" %}
+{% set version = "0.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lipyphilic-{{ version }}.tar.gz
-  sha256: 19d428a6fb11eb8694a9d0e4e85387e0eccf4027b34a85cdf4e7015220b4dcd1
+  sha256: dfc6d9116c7f7251f1b69bfb93c635c7d3a16f90ee27537365fbacddf540bbbc
 
 build:
   number: 0
@@ -19,10 +19,10 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.6
+    - python >=3.7
   run:
     - freud >=2.4.1
-    - mdanalysis >=1.0
+    - mdanalysis >=2.0
     - tidynamics
     - numpy >=1.16
     - pandas >=1.1
@@ -31,6 +31,8 @@ requirements:
     - tqdm
     - mock # required by MDAnalysis
     - cython # required by gsd and Freud
+    - matplotlib
+    - seaborn
 
 test:
   imports:
