@@ -11,7 +11,7 @@ source:
   sha256: cd00b2caa3553e5bb1e206f0852308bfbb9c6f2753f13b8c51b6075db9ddfba6
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -31,7 +31,7 @@ requirements:
     - tqdm
     - mock # required by MDAnalysis
     - cython # required by gsd and Freud
-    - matplotlib
+    - matplotlib-base
     - seaborn
 
 test:
