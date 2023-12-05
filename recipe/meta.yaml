@@ -19,25 +19,27 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >=3.7
+    - python >=3.10
+    - maturin <2.0
   run:
-    - freud >=2.4.1
-    - mdanalysis >=2.0
-    - tidynamics
-    - numpy >=1.16
-    - pandas >=1.1
-    - python >=3.6
+    - attrs
+    - numpy
     - scipy
-    - tqdm
-    - mock # required by MDAnalysis
-    - cython # required by gsd and Freud
+    - pandas
     - matplotlib
+    - freud
+    - tidynamics
     - seaborn
+    - tqdm
+
 
 test:
   imports:
     - lipyphilic
-    - lipyphilic.lib
+    - lipyphilic.analysis
+    - lipyphilic.leaflets
+    - lipyphilic.transformations
+    - lipyphilic.plotting
   commands:
     - pip check
   requires:
