@@ -14,8 +14,9 @@ build:
   number: 0
   noarch: python
   script:
-    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+    - {{ PYTHON }} -m pip install . -vv
+    - cd rust
+    - cargo-bundle-licenses --format yaml --output ../THIRDPARTY.yml
 
 requirements:
   build:
