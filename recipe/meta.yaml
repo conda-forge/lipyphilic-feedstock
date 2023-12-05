@@ -13,25 +13,25 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - pip
-    - pytest-runner
     - python >=3.10
     - maturin <2.0
+    - pip
   run:
+    - python >=3.10
     - attrs
     - numpy
     - scipy
     - pandas
-    - matplotlib
+    - matplotlib-base
+    - mdanalysis
     - freud
     - tidynamics
     - seaborn
     - tqdm
-
 
 test:
   imports:
