@@ -13,9 +13,17 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script:
+    - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
+    - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
+  build:
+    - python
+    - cross-python_{{ target_platform }}
+    - {{ compiler('rust') }}
+    - maturin <2.0
+    - cargo-bundle-licenses
   host:
     - python >=3.10
     - maturin <2.0
@@ -49,7 +57,9 @@ about:
   home: https://github.com/p-j-smith/lipyphilic
   summary: A Python toolkit for analysing MD simulations of lipid membranes
   license: GPL-2.0-or-later
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
 
 extra:
   recipe-maintainers:
