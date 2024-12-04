@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lipyphilic-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lipyphilic-{{ version }}.tar.gz
   sha256: db58466f4a78962cd274f19c08dc7413f360ca22ce86f3bea908716a3943657d
 
 build:
@@ -16,7 +16,7 @@ build:
     - {{ PYTHON }} -m pip install . -vv
     - cd rust
     - cargo-bundle-licenses --format yaml --output ../THIRDPARTY.yml
-  skip: true # [ py==39 ]
+  skip: true  # [ py==39 ]
 
 requirements:
   build:
