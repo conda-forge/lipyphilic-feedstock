@@ -1,5 +1,5 @@
 {% set name = "lipyphilic" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.1" %}
 
 
 package:
@@ -8,15 +8,15 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lipyphilic-{{ version }}.tar.gz
-  sha256: db58466f4a78962cd274f19c08dc7413f360ca22ce86f3bea908716a3943657d
+  sha256: fdcc39e2806da602f25b7bae5841ee0b6966e0196c09b706ff1f66ac866313b2
 
 build:
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . -vv
     - cd rust
     - cargo-bundle-licenses --format yaml --output ../THIRDPARTY.yml
-  skip: true  # [ py==39 ]
+  skip: true  # [ py==39]
 
 requirements:
   build:
