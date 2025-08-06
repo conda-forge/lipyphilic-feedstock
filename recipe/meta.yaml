@@ -21,7 +21,7 @@ build:
 
 requirements:
   build:
-    - python >=3.11,<3.13                    # [build_platform != target_platform]
+    - python >=3.11,<3.14                    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ stdlib("c") }}
     - {{ compiler('rust') }}
