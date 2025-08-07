@@ -11,13 +11,12 @@ source:
   sha256: fdcc39e2806da602f25b7bae5841ee0b6966e0196c09b706ff1f66ac866313b2
 
 build:
-  number: 2
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . -vv
     - cd rust
     - cargo-bundle-licenses --format yaml --output ../THIRDPARTY.yml
-  skip: true  # [ py==39]
-  skip: true  # [ py==310]
+  skip: true  # [ py<311]
 
 requirements:
   build:
@@ -28,7 +27,7 @@ requirements:
     - maturin <2.0
     - cargo-bundle-licenses
   host:
-    - python {{ python }}
+    - python
     - maturin <2.0
     - pip
   run:
