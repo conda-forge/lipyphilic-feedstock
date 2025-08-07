@@ -33,7 +33,7 @@ requirements:
   run:
     - python
     - attrs
-    - numpy <2.0
+    - numpy
     - scipy
     - pandas
     - matplotlib-base
