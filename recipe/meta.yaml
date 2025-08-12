@@ -28,12 +28,13 @@ requirements:
     - cargo-bundle-licenses
   host:
     - python
+    - numpy  >=2.0
     - maturin <2.0
     - pip
   run:
     - python
     - attrs
-    - numpy
+    - numpy >=2.0
     - scipy
     - pandas
     - matplotlib-base
