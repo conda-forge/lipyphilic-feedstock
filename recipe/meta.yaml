@@ -11,7 +11,7 @@ source:
   sha256: fdcc39e2806da602f25b7bae5841ee0b6966e0196c09b706ff1f66ac866313b2
 
 build:
-  number: 1
+  number: 2
   script:
     - {{ PYTHON }} -m pip install . -vv
     - cd rust
